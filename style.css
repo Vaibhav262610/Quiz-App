@@ -9,6 +9,7 @@ html{
 
 body{
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    overflow: hidden;
 
 }
 
@@ -72,7 +73,7 @@ ul li{
 }
 
 #showscore {
-    /* background-color: tomato;     */
+    /* background-color: rgb(58, 255, 91);     */
     padding: 4rem 7rem ;
     padding-top: 2rem;
 }

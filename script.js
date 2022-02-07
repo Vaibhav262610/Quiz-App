@@ -13,7 +13,7 @@ const quesData = [
     {
         question : "Q2: HTML is a ?" , 
         a:"Programming Language1",
-        b:"Programming Language2",
+        b:"Programming Language2",  
         c:"Programming Language3",
         d:"Programming Language4",
         ans:"ans1",
@@ -38,6 +38,60 @@ const quesData = [
         d:"Programming Language4",
         ans:"ans1",
         barColor:"row4"
+    },
+    {
+        question : "Q5: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans2",
+        barColor:"row5"
+    },
+    {
+        question : "Q6: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans4",
+        barColor:"row6"
+    },
+    {
+        question : "Q7: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans1",
+        barColor:"row7"
+    },
+    {
+        question : "Q8: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans1",
+        barColor:"row8"
+    },
+    {
+        question : "Q9: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans1",
+        barColor:"row9"
+    },
+    {
+        question : "Q10: HTML is a ?" , 
+        a:"Programming Language1",
+        b:"Programming Language2",
+        c:"Programming Language3",
+        d:"Programming Language4",
+        ans:"ans1",
+        barColor:"row10"
     }
 ]
 
@@ -71,7 +125,7 @@ const checkAns = () => {
 
     answers.forEach((curAnsElem) =>  {
         if(curAnsElem.checked){
-            // console.log(curAnsElem.id)
+            console.log(curAnsElem.id)
             answer = curAnsElem.id;
 
         }
@@ -100,18 +154,17 @@ submit.addEventListener('click' , () => {
     };
 
         deSelectAll()
-    
+    console.log(questionLoad)
     if(checkAnswer == quesData[questionLoad].ans){
-        console.log("working")
-        // myID = row
         let change = document.getElementById(quesData[questionLoad].barColor)
-        change.style.backgroundColor = "green"
+        change.style.backgroundColor = "rgb(58, 255, 91)"
+        // debugger;
     }else{
         
         let change = document.getElementById(quesData[questionLoad].barColor)
-        change.style.backgroundColor = "red"
+        change.style.backgroundColor = "rgb(255, 71, 39)"
     }
-    
+
         questionLoad++;
 
         if(questionLoad < quesData.length){
@@ -124,6 +177,13 @@ submit.addEventListener('click' , () => {
             `;
 
             showscore.classList.remove('showarea')
+            let hide = document.querySelector('ul');
+            let hide1 = document.querySelector('button');
+            let hide2 = document.querySelector('h2');
+            hide.style.display = "none";
+            hide1.style.display = "none";
+            hide2.style.display = "none";
+
         }
 
 
